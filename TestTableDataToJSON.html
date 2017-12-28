@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Table Data to JSON</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$('#convert-table').click( function() {
+  var table = $('#example-table').tableToJSON();
+  console.log(table);
+  var stringobject = JSON.stringify(table);
+  alert(stringobject);
+  alert(JSON.parse(stringobject));
+});
+});
+</script>
+<style type="text/css">
+
+
+
+</style>
+</head>
+<body>
+<table id='example-table'  border="1">
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Marks</th>
+<th>Age</th>
+<th>Sex</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aravind</td>
+<td>Kumar</td>
+<td>70</td>
+<td>30</td>
+<td>Male</td>
+<td>Karimnagar</td>
+</tr>
+<tr>
+<td>Ramesh</td>
+<td>Pochampally</td>
+<td>80</td>
+<td>35</td>
+<td>Male</td>
+<td>Peddapally</td>
+</tr>
+<tr>
+<td>Kiran</td>
+<td>Kumar</td>
+<td>90</td>
+<td>20</td>
+<td>Male</td>
+<td>Hyderabad</td>
+</tr>
+<tr>
+<td>Sri Kala</td>
+<td>Kumari</td>
+<td>75</td>
+<td>25</td>
+<td>Female</td>
+<td>Ameerpet</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<button id="convert-table" >Submit!</button>
+
+</body>
+</html>
